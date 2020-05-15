@@ -3,6 +3,14 @@ kind: Kustomization
 
 resources:
   - deployment.yaml
+  
+generatorOptions:
+  disableNameSuffixHash: true
+ 
+configMapGenerator:
+- name: prod-nginx-config
+  files:
+    configs/fake_config.py
 
 commonLabels:
   app: nginx
