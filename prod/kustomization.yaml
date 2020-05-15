@@ -10,7 +10,7 @@ generatorOptions:
 configMapGenerator:
 - name: prod-nginx-config
   files:
-    configs/fake_config.py
+  - configs/fake_config.py
 
 commonLabels:
   app: nginx
