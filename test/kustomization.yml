@@ -1,0 +1,21 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - deployment.yaml
+  
+generatorOptions:
+  disableNameSuffixHash: true
+ 
+configMapGenerator:
+- name: test-nginx-config
+  files:
+  - configs/fake_config.py
+  
+secretGenerator:
+- name: test-nginx-secret
+  files:
+  - configs/fake_secret.py
+
+commonLabels:
+  app: nginx
