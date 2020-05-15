@@ -11,6 +11,11 @@ configMapGenerator:
 - name: prod-nginx-config
   files:
   - configs/fake_config.py
+  
+secretGenerator:
+- name: prod-nginx-secret
+  files:
+  - configs/fake_secret.py
 
 commonLabels:
   app: nginx
