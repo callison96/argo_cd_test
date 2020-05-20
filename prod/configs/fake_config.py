@@ -1,4 +1,4 @@
 import fake 
 
-username= fake_username_many_things_need
+username= fake_username_many_things_hash
 password= fake_1234
