@@ -5,7 +5,7 @@ resources:
   - deployment.yaml
   
 generatorOptions:
-  disableNameSuffixHash: true
+  disableNameSuffixHash: false
  
 configMapGenerator:
 - name: prod-nginx-config
